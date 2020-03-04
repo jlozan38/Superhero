@@ -3,6 +3,3 @@
     <router-link />
   </div>
 </template>
-
-
-
