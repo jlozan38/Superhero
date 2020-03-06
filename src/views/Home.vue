@@ -10,7 +10,7 @@
       />
     </label>
     <div class="flex flex-col flex-wrap justify-center items-center">
-      <PulseLoader v-if="loading" class="mt-4" color="#38B2AC" size="2em" />
+      <PulseLoader v-if="loading" class="mt-4" color="#5c6ac4" size="2em" />
       <h1
         v-if="searchItem"
         class="w-full text-center px-4 md:px-16 text-teal-200 font-semibold text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
