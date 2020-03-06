@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    heroes: [],
+    heroes: [ ],
     searchItem: '',
     loading: false,
     notFound: false,
