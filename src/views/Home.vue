@@ -21,32 +21,36 @@
       </h1>
       <div>
         <h1 v-if="notFound">
-          <img :src="notFoundImage" alt="not found">
+          <img :src="notFoundImage" alt="not found" />
         </h1>
       </div>
       <div v-if="searchItem && heroes.length > 0" class="w-full flex flex-wrap">
-        <Card class="sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2" 
-        v-for="hero in heroes" :key="hero.id" />
+        <Card
+          class="sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2"
+          v-for="hero in heroes"
+          :key="hero.id"
+          :hero="hero"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 import Card from "@/components/Card.vue";
-import notFoundImage from "../assets/notFoundImage.gif"
+import notFoundImage from "../assets/notFoundImage.gif";
 
 export default {
   name: "Home",
   components: {
     Card,
-    PulseLoader,
+    PulseLoader
   },
   data() {
     return {
-      notFoundImage,
-    }
+      notFoundImage
+    };
   },
   computed: {
     searchItem() {
@@ -56,10 +60,10 @@ export default {
       return this.$store.getters.getHeroes;
     },
     loading() {
-      return this.$store.getters.isLoading
+      return this.$store.getters.isLoading;
     },
     notFound() {
-      return this.$store.getters.getNotFound
+      return this.$store.getters.getNotFound;
     }
   },
   methods: {
